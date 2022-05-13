@@ -10,5 +10,5 @@ object Constants {
     //Local
     const val BREED_TABLE = "breed_table"
     const val BREED_REMOTE_KEY_TABLE = "breed_remote_key_table"
-    const val BREED_FAV_TABLE ="breed_fav_table"
+    const val BREED_FAV_TABLE = "breed_fav_table"
 }

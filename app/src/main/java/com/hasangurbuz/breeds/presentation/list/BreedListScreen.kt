@@ -1,7 +1,6 @@
 package com.hasangurbuz.breeds.presentation.list
 
 
-import android.widget.ProgressBar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -45,13 +44,12 @@ fun BreedListScreen(
                 item {
                     CircProgressPar()
                 }
+            } else if (breedItems.loadState.prepend.endOfPaginationReached) {
+                breedItems.refresh()
             } else if (breedItems.loadState.refresh is LoadState.Loading) {
                 item {
                     Box(modifier = Modifier.fillParentMaxSize()) {
-                        Text(
-                            text = "Loading",
-                            modifier = Modifier.align(Alignment.Center)
-                        )
+                        CircProgressPar()
                     }
                 }
             }
@@ -117,51 +115,4 @@ fun CircProgressPar() {
             .wrapContentSize(align = Alignment.Center)
     )
 }
-
-
-//@Composable
-//fun SearchBar(
-//    navController: NavController,
-//    modifier: Modifier = Modifier,
-//    hint: String = "Search Cat Breeds!",
-//    onSearch: (String) -> Unit = {}
-//) {
-//    val text = remember {
-//        mutableStateOf("")
-//    }
-//    val hintState = remember {
-//        mutableStateOf(true)
-//    }
-//
-//    Box() {
-//        OutlinedTextField(
-//            value = text.value,
-//            onValueChange = { it ->
-//                text.value = it
-//                onSearch(it)
-//            },
-//            maxLines = 1,
-//            singleLine = true,
-//            textStyle = TextStyle(color = Color.Black),
-//            modifier = Modifier
-//                .fillMaxWidth()
-////                .shadow(5.dp, RoundedCornerShape(10))
-////                .border(2.dp,MaterialTheme.colors.primary)
-////                .background(Color.White, RoundedCornerShape(10))
-//                .padding(horizontal = 10.dp, vertical = 12.dp)
-//                .onFocusChanged {
-//                    hintState.value = it.isFocused && text.value.isEmpty()
-//                }
-//
-//        )
-//        if (!hintState.value) {
-//            Text(
-//                text = hint,
-//                color = Color.LightGray,
-//                modifier = Modifier
-//                    .padding(horizontal = 30.dp, vertical = 30.dp)
-//            )
-//        }
-//    }
-//}
 

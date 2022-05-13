@@ -11,6 +11,7 @@ import com.hasangurbuz.breeds.presentation.detail.BreedDetailScreen
 import com.hasangurbuz.breeds.presentation.favorite.BreedFavoriteScreen
 import com.hasangurbuz.breeds.presentation.home.HomeScreen
 import com.hasangurbuz.breeds.presentation.search.BreedSearchScreen
+import com.hasangurbuz.breeds.presentation.splash.BreedSplashScreen
 
 @ExperimentalPagingApi
 @Composable
@@ -18,7 +19,7 @@ fun Navigation() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = Screen.HomeScreen.route
+        startDestination = Screen.BreedSplashScreen.route
     ) {
         composable(route = Screen.HomeScreen.route) {
             HomeScreen(navController = navController)
@@ -42,6 +43,9 @@ fun Navigation() {
         }
         composable(Screen.BreedFavoriteScreen.route) {
             BreedFavoriteScreen(navController = navController)
+        }
+        composable(Screen.BreedSplashScreen.route) {
+            BreedSplashScreen(navController = navController)
         }
 
     }

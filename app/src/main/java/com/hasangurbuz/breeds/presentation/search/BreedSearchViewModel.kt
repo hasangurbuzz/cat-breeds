@@ -45,6 +45,7 @@ class BreedSearchViewModel @Inject constructor(private val breedRepository: Bree
             }
         }
     }
+
     fun changeFavoriteStatus(breedId: String) {
         viewModelScope.launch {
             breedRepository.changeBreedFavoriteStatus(breedId)

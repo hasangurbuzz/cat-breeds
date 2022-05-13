@@ -22,5 +22,4 @@ interface BreedApi {
     ): List<Breed>
 
 
-
 }

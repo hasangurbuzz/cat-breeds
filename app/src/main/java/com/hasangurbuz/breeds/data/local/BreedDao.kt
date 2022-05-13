@@ -19,7 +19,8 @@ interface BreedDao {
 
     @Query("SELECT * FROM BREED_TABLE WHERE FAVORITE = 1 ORDER BY NAME ASC")
     suspend fun getFavoriteBreeds(): List<Breed>
-//
+
+    //
     @Query("UPDATE BREED_TABLE SET FAVORITE = NOT FAVORITE WHERE ID= :breedId ")
     suspend fun changeBreedFavoriteStatus(breedId: String)
 

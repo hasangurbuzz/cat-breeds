@@ -7,7 +7,6 @@ import com.hasangurbuz.breeds.data.repository.BreedRepository
 import com.hasangurbuz.breeds.domain.model.Breed
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -16,13 +15,21 @@ import javax.inject.Inject
 class BreedDetailViewModel @Inject constructor(private val breedRepository: BreedRepository) :
     ViewModel() {
 
-    private val _state = MutableStateFlow(emptyList<Breed>())
-    val state: StateFlow<List<Breed>> = _state
+    private val _breedDetail = MutableStateFlow(emptyList<Breed>())
 
+
+    var breedDetail = _breedDetail
 
     fun getBreedById(id: String) {
         viewModelScope.launch {
-            _state.value = breedRepository.getBreedById(id)
+            _breedDetail.value = breedRepository.getBreedById(id)
+        }
+    }
+
+    fun changeFavoriteStatus(breedId: String) {
+        viewModelScope.launch {
+            breedRepository.changeBreedFavoriteStatus(breedId)
+            getBreedById(breedId)
         }
     }
 

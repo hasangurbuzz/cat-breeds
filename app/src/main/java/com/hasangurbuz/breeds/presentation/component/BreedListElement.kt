@@ -9,7 +9,8 @@ import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Favorite
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -60,9 +61,9 @@ fun BreedListElement(
 
             IconButton(onClick = { onFavoriteChange(breed.id) }) {
                 Icon(
-                    Icons.Rounded.Favorite,
+                    if (breed.favorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
                     "",
-                    tint = if (breed.favorite) Color.Red else Color.White
+                    tint = Color.Red
                 )
             }
 

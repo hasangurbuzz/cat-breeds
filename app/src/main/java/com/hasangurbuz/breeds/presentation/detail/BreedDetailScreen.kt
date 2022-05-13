@@ -101,7 +101,7 @@ fun BreedDetailScreen(
                         }
                         origin?.let { it ->
                             BreedFeature(
-                                featureName = "Origin:",
+                                featureName = "Origin",
                                 featureValue = it
                             )
                         }
@@ -146,7 +146,7 @@ fun BreedFeature(featureName: String, featureValue: String, clickable: Boolean =
 
         Row(modifier = Modifier.padding(5.dp)) {
             Text(
-                text = featureName,
+                text = "$featureName->",
                 style = TextStyle(
                     color = Color.Black,
                     fontWeight = FontWeight(600),

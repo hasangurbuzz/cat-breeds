@@ -15,17 +15,17 @@
 - Gson
 ```
 <p align="center">
-<img src="https://github.com/hasangurbuzz/ss/cat-breeds/blob/favorite/1.png" width="400" >
+<img src="https://github.com/hasangurbuzz/cat-breeds/blob/favorite/ss/1.png" width="400" >
 </p>
 
 <p align="center">
-<img src="https://github.com/hasangurbuzz/ss/cat-breeds/blob/favorite/2.png" width="400" >
+<img src="https://github.com/hasangurbuzz/cat-breeds/blob/favorite/ss/2.png" width="400" >
 </p>
 
 <p align="center">
-<img src="https://github.com/hasangurbuzz/ss/cat-breeds/blob/favorite/3.png" width="400" >
+<img src="https://github.com/hasangurbuzz/cat-breeds/blob/favorite/ss/3.png" width="400" >
 </p>
 
 <p align="center">
-<img src="https://github.com/hasangurbuzz/ss/cat-breeds/blob/favorite/4.png" width="400" >
+<img src="https://github.com/hasangurbuzz/cat-breeds/blob/favorite/ss/4.png" width="400" >
 </p>
